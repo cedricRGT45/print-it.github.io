@@ -1,4 +1,11 @@
-# Projet Carrousel Print It - Readme
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/images/logo.png">
+ <source media="(prefers-color-scheme: light)" srcset="assets/images/logo.png">
+ <img alt="Logo de print-it" src="assets/images/logo.png">
+</picture>
+
+
+# Projet Carrousel Print It 
 
 ## Sommaire
 
