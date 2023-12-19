@@ -25,7 +25,8 @@
         - [6. Création des points (bullets)](#6-création-des-points-bullets)
         - [7. Fonction pour mettre à jour les points](#7-fonction-pour-mettre-à-jour-les-points)
         - [8. Gestion des événements pour les boutons suivant/précédent](#8-gestion-des-événements-pour-les-boutons-suivantprécédent)
-3. [Livrables](#livrables)
+
+Retrouvez la version en ligne ici: [GitHub Pages](https://cedricrgt45.github.io/print-it.github.io/)
 
 ---
 
@@ -164,11 +165,3 @@ prevButton.addEventListener("click", () => {
 
 **Explication :** Des écouteurs d'événements sont ajoutés aux boutons suivant/précédent, déclenchant le changement de diapositive correspondant et mettant à jour les points.
 
-## Livrables
-
-- [Lien GitHub du Code](lien_vers_votre_repo_github.txt)
-- [Lien GitHub Pages du Site Print It](lien_vers_votre_github_pages.txt)
-
----
-
-Félicitations ! Vous avez terminé la création du carrousel pour Print It. N'hésitez pas à consulter le code pour des détails plus approfondis. Merci pour votre travail !
