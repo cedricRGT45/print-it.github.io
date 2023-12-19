@@ -1,93 +1,92 @@
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="assets/images/logo.png">
- <source media="(prefers-color-scheme: light)" srcset="assets/images/logo.png">
+<source srcset="assets/images/logo.png">
  <img alt="Logo de print-it" src="assets/images/logo.png">
 </picture>
 
+# Print It Carousel Project - Readme
 
-# Projet Carrousel Print It 
+## Table of Contents
 
-## Sommaire
+1. [Project Context](#project-context)
+2. [Project Steps](#project-steps)
+    - [Step 1: Update HTML Code](#step-1-update-html-code)
+    - [Step 2: Add Event Listeners to Arrows](#step-2-add-event-listeners-to-arrows)
+    - [Step 3: Add Bullet Points to the Slider](#step-3-add-bullet-points-to-the-slider)
+    - [Step 4: Modify Slide on Button Click](#step-4-modify-slide-on-button-click)
+    - [Step 5: Implement Infinite Scrolling](#step-5-implement-infinite-scrolling)
+    - [Explanation of JavaScript Code](#explanation-of-javascript-code)
+        - [1. Declaration of Slides and Initialization of Index](#1-declaration-of-slides-and-initialization-of-index)
+        - [2. Selection of DOM Elements](#2-selection-of-dom-elements)
+        - [3. Function to Change Slide](#3-function-to-change-slide)
+        - [4. Creation of Title Element](#4-creation-of-title-element)
+        - [5. Initialization of Title on Page Load](#5-initialization-of-title-on-page-load)
+        - [6. Creation of Bullet Points](#6-creation-of-bullet-points)
+        - [7. Function to Update Bullet Points](#7-function-to-update-bullet-points)
+        - [8. Event Handling for Next/Previous Buttons](#8-event-handling-for-nextprevious-buttons)
 
-1. [Contexte du Projet](#contexte-du-projet)
-2. [Étapes du Projet](#étapes-du-projet)
-    - [Étape 1: Mise à Jour du Code HTML](#étape-1-mise-à-jour-du-code-html)
-    - [Étape 2: Ajout d'Event Listeners sur les Flèches](#étape-2-ajout-devent-listeners-sur-les-flèches)
-    - [Étape 3: Ajout de Bullet Points au Slider](#étape-3-ajout-de-bullet-points-au-slider)
-    - [Étape 4: Modification du Slide au Clic sur le Bouton](#étape-4-modification-du-slide-au-clic-sur-le-bouton)
-    - [Étape 5: Mise en Place du Défilement Infini](#étape-5-mise-en-place-du-défilement-infini)
-    - [Explication du Code JavaScript](#explication-du-code-javascript)
-        - [1. Déclaration des slides et initialisation de l'index](#1-déclaration-des-slides-et-initialisation-de-lindex)
-        - [2. Sélection des éléments du DOM](#2-sélection-des-éléments-du-dom)
-        - [3. Fonction pour changer de diapositive](#3-fonction-pour-changer-de-diapositive)
-        - [4. Création de l'élément de titre](#4-création-de-lélément-de-titre)
-        - [5. Initialisation du titre sur le chargement de la page](#5-initialisation-du-titre-sur-le-chargement-de-la-page)
-        - [6. Création des points (bullets)](#6-création-des-points-bullets)
-        - [7. Fonction pour mettre à jour les points](#7-fonction-pour-mettre-à-jour-les-points)
-        - [8. Gestion des événements pour les boutons suivant/précédent](#8-gestion-des-événements-pour-les-boutons-suivantprécédent)
 
-Retrouvez la version en ligne ici: [GitHub Pages](https://cedricrgt45.github.io/print-it.github.io/)
+Visit the live version here: [GitHub Pages](https://cedricrgt45.github.io/print-it.github.io/)
 
 ---
 
-## Contexte du Projet
+## Project Context
 
-En tant que développeur front-end en freelance, vous avez décroché une offre pour dynamiser le site Internet statique de l'imprimerie familiale "Print It". Vous avez reçu des instructions de Lucien Gerodo, le directeur, pour créer un carrousel interactif. Ce projet vise à vous familiariser avec JavaScript à travers différentes étapes.
+As a freelance front-end developer, you've landed a contract to enhance the static website of the family-owned printing shop, "Print It." Lucien Gerodo, the director, has provided instructions to create an interactive carousel. This project is designed to guide you through JavaScript step by step.
 
-## Étapes du Projet
+## Project Steps
 
-### Étape 1: Mise à Jour du Code HTML
+### Step 1: Update HTML Code
 
-- Analysez le code HTML et CSS existant.
-- Ajoutez les images des flèches (`arrow_left.png` et `arrow_right.png`) pour permettre la navigation dans le carrousel.
-- Utilisez le chapitre "Abordez d’autres techniques de mise en page" du cours "Créez votre site web avec HTML5 et CSS3" comme ressource.
+- Analyze the existing HTML and CSS code.
+- Add arrow images (`arrow_left.png` and `arrow_right.png`) to enable carousel navigation.
+- Refer to the chapter "Explore other layout techniques" in the course "Build your website with HTML5 and CSS3" for guidance.
 
-### Étape 2: Ajout d'Event Listeners sur les Flèches
+### Step 2: Add Event Listeners to Arrows
 
-- Ajoutez des event listeners sur les flèches pour gérer le changement des images.
-- Testez les event listeners en ajoutant des `console.log` ou des `alert`.
-- Assurez-vous de différencier le clic sur la flèche gauche de celui sur la flèche droite.
-- Utilisez les chapitres "Récupérez un élément d’une page web" et "Modifiez un élément d’une page web" du cours "Apprenez à programmer avec JavaScript" comme ressources.
+- Add event listeners to the arrows to handle image changes.
+- Test event listeners with `console.log` or `alert`.
+- Ensure differentiation between clicks on the left and right arrows.
+- Refer to the chapters "Retrieve an element from a web page" and "Modify an element of a web page" in the course "Learn to program with JavaScript" for assistance.
 
-### Étape 3: Ajout de Bullet Points au Slider
+### Step 3: Add Bullet Points to the Slider
 
-- Ajoutez des bullet points en bas du slider, un par image.
-- Différenciez le point de la diapositive en cours avec une classe spécifique.
-- Utilisez la documentation MDN sur les tableaux pour compter le nombre d'éléments dans le tableau "slides" du fichier `script.js`.
-- Utilisez le chapitre "Modifiez un élément d’une page web" du cours "Apprenez à programmer avec JavaScript".
+- Add bullet points at the bottom of the slider, one for each image.
+- Differentiate the bullet point for the currently viewed slide using a specific class.
+- Use the MDN documentation on arrays to count the number of elements in the "slides" array in the `script.js` file.
+- Consult the chapter "Modify an element of a web page" in the course "Learn to program with JavaScript."
 
-### Étape 4: Modification du Slide au Clic sur le Bouton
+### Step 4: Modify Slide on Button Click
 
-- Au clic sur la flèche droite, changez le point actif, l'image, et le texte correspondant.
-- Au clic sur la flèche gauche, effectuez les mêmes changements pour les éléments précédents.
-- Utilisez les index du tableau et construisez correctement le chemin de la nouvelle image.
-- Utilisez la propriété `innerHTML` pour intégrer le texte de la diapositive.
-- Consultez le chapitre "Modifiez un élément d’une page web" du cours "Apprenez à programmer avec Javascript".
+- On clicking the right arrow, change the active bullet point, image, and corresponding text.
+- On clicking the left arrow, make similar changes for the previous elements.
+- Build the path for the new image carefully.
+- Use the `innerHTML` property to insert the slide's tagline text.
+- Work with array indices.
+- Refer to the chapter "Modify an element of a web page" in the course "Learn to program with Javascript."
 
-### Étape 5: Mise en Place du Défilement Infini
+### Step 5: Implement Infinite Scrolling
 
-- Ajoutez des conditions pour gérer le défilement infini.
-- Si on est à la dernière image et qu'on clique à droite, affichez la première image, et le point sélectionné est le premier.
-- Si on est à la première image et qu'on clique à gauche, affichez la dernière image, et le point sélectionné est le dernier.
-- Consultez le chapitre "Contrôlez du code grâce aux conditions
+- Add conditions to manage infinite scrolling.
+- If on the last image and clicking right, display the first image; the selected point is the first.
+- If on the first image and clicking left, display the last image; the selected point is the last.
+- In all cases, update the text to match the shown image.
+- Consult the chapter "Control code with conditions" in the course "Learn to program with Javascript."
 
-" du cours "Apprenez à programmer avec Javascript".
+### Explanation of JavaScript Code
 
-### Explication du Code JavaScript
-
-#### 1. Déclaration des slides et initialisation de l'index
+#### 1. Declaration of Slides and Initialization of Index
 
 ```javascript
 const slides = [
-  // ... (tableau d'objets représentant les diapositives)
+  // ... (array of objects representing slides)
 ];
 
 let index = 0;
 ```
 
-**Explication :** La variable `slides` est un tableau d'objets, chaque objet représentant une diapositive avec une image et une balise associée. L'index est initialisé à 0 pour pointer sur la première diapositive.
+**Explanation:** The variable `slides` is an array of objects, each representing a slide with an image and an associated tagline. The index is initialized to 0 to point to the first slide.
 
-#### 2. Sélection des éléments du DOM
+#### 2. Selection of DOM Elements
 
 ```javascript
 const imgSlide = document.querySelector(".slider-img");
@@ -98,9 +97,9 @@ const dotContainer = document.querySelector("#dots");
 const slider = document.getElementById("slider");
 ```
 
-**Explication :** Ces lignes de code sélectionnent des éléments HTML à l'aide de sélecteurs de classe ou d'ID. Ils représentent l'image du carrousel, les boutons suivant/précédent, le chemin cible des images, le conteneur des points (bullets), et le conteneur principal du slider.
+**Explanation:** These lines of code select HTML elements using class or ID selectors. They represent the carousel image, next/previous buttons, image path, bullet container, and the main slider container.
 
-#### 3. Fonction pour changer de diapositive
+#### 3. Function to Change Slide
 
 ```javascript
 function ChangeSlide(direction) {
@@ -108,9 +107,9 @@ function ChangeSlide(direction) {
 }
 ```
 
-**Explication :** Cette fonction prend en paramètre la direction du changement de diapositive (1 pour suivant, -1 pour précédent) et met à jour l'index en conséquence. Elle gère le changement d'image et la mise à jour du titre de la diapositive.
+**Explanation:** This function takes the direction of slide change (1 for next, -1 for previous) as a parameter and updates the index accordingly. It manages image changes and updates the slide's title.
 
-#### 4. Création de l'élément de titre
+#### 4. Creation of Title Element
 
 ```javascript
 let title = document.getElementById("titleContent");
@@ -119,17 +118,17 @@ title.setAttribute("id", "titleContent");
 slider.appendChild(title);
 ```
 
-**Explication :** Un élément de paragraphe (<p>) est créé et ajouté en tant qu'enfant de l'élément du slider. Cet élément de titre représente le texte de la diapositive.
+**Explanation:** A paragraph element (<p>) is created and added as a child of the slider element. This title element represents the slide's text.
 
-#### 5. Initialisation du titre sur le chargement de la page
+#### 5. Initialization of Title on Page Load
 
 ```javascript
 title.innerHTML = slides[index].tagLine;
 ```
 
-**Explication :** Le texte de la première diapositive est défini comme contenu initial de l'élément de titre.
+**Explanation:** The text of the first slide is set as the initial content of the title element.
 
-#### 6. Création des points (bullets)
+#### 6. Creation of Bullet Points
 
 ```javascript
 slides.forEach((slide, i) => {
@@ -137,9 +136,9 @@ slides.forEach((slide, i) => {
 });
 ```
 
-**Explication :** Une boucle forEach parcourt chaque diapositive et crée un élément de point (<span>) pour chaque diapositive. Les points sont ajoutés au conteneur dotContainer et associés à un événement de clic.
+**Explanation:** A forEach loop iterates over each slide, creating a bullet point element (<span>) for each slide. The points are added to the dotContainer and associated with a click event.
 
-#### 7. Fonction pour mettre à jour les points
+#### 7. Function to Update Bullet Points
 
 ```javascript
 function updateDots(index) {
@@ -147,9 +146,9 @@ function updateDots(index) {
 }
 ```
 
-**Explication :** Cette fonction met à jour les classes des éléments de point pour refléter la diapositive actuelle sélectionnée.
+**Explanation:** This function updates the class of bullet point elements to reflect the currently selected slide.
 
-#### 8. Gestion des événements pour les boutons suivant/précédent
+#### 8. Event Handling for Next/Previous Buttons
 
 ```javascript
 nextButton.addEventListener("click", () => {
@@ -163,5 +162,4 @@ prevButton.addEventListener("click", () => {
 });
 ```
 
-**Explication :** Des écouteurs d'événements sont ajoutés aux boutons suivant/précédent, déclenchant le changement de diapositive correspondant et mettant à jour les points.
-
+**Explanation:** Event listeners are added to the next/previous buttons, triggering the corresponding slide change and updating the bullet points.
